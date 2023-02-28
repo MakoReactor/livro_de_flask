@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Flasky - Home {% endblock %}
+
+{% block page_content %}
+<div class='page-reader'>
+  <h1>Welcome</h1>
+  <p>The local data and time is {{ moment(current_time).format('LLL') }}</p>
+  <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+  <p>{{ moment(current_time).calendar() }}</p>
+</div>
+{% endblock %}
+
